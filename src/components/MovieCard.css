@@ -1,0 +1,6 @@
+.movie-card{
+    background-color: aliceblue;
+}
+.movie-card:hover{
+    background-color: #AFD198;
+}
