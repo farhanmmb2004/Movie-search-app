@@ -14,7 +14,7 @@ const SearchForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input 
-      // className='form-control'
+      className='input'
         type="text" 
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
