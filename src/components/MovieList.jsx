@@ -10,7 +10,7 @@ const MovieList = () => {
       {movies.map(movie => (
         <MovieCard key={movie.imdbID} movie={movie} />
       ))}
-    <p>click on Name to see details</p>
+   
     </div>
   );
 };
