@@ -8,14 +8,16 @@ const MovieCard = ({ movie }) => {
   const handleClick = async () => {
     setClick(!click);
     let detail = await fetchMovieDetails(movie.imdbID);
-    // console.log(detail);
     setDetails(detail);
   };
+  const back=()=>{
+    setClick(!click)
+  }
 
   return (
     <div className="movie-card" onClick={handleClick}>
-     {click&&<hr/>}
-     <h3>{movie.Title}</h3>
+     <h5>{movie.Title}</h5>
+     <img src={movie.Poster}  />
      <p>{movie.Year}</p>
      {click&&<MovieDetail details={details}></MovieDetail>}
     </div>
