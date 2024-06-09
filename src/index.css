@@ -23,8 +23,9 @@ a:hover {
 }
 
 body {
-  background-image:url(https://img.freepik.com/free-photo/view-black-white-theatre-room_23-2151184669.jpg);
-  background-size: cover;
+  /* background-image:url(https://img.freepik.com/free-photo/view-black-white-theatre-room_23-2151184669.jpg); */
+  /* background-size: cover; */
+  background-color: #213547;
   color: white;
   margin: 0;
   display: flex;

@@ -19,9 +19,11 @@ const SearchForm = () => {
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
         placeholder="Search for movies..."
+        data-aos="slide-right"
       />
       <br />
-      <button type="submit">Search</button>
+      <button type="submit"
+      data-aos="slide-left">Search</button>
     </form>
   );
 };

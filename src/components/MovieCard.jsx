@@ -15,7 +15,7 @@ const MovieCard = ({ movie }) => {
   }
 
   return (
-    <div className="movie-card" onClick={handleClick}>
+    <div className="movie-card" onClick={handleClick} data-aos="fade-up" data-aos-offset="80">
      <h5>{movie.Title}</h5>
      <img src={movie.Poster}  />
      <p>{movie.Year}</p>

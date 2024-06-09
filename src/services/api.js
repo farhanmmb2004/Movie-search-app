@@ -6,20 +6,18 @@ const BASE_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
 export const fetchMovies = async (query) => {
   try {
     const response = await axios.get(`${BASE_URL}&s=${query}`);
-    console.log(response.data);
-    return response.data.Search|| [];
+    return response.data;
   } catch (error) {
-    alert('Error fetching movies:', error);
+    alert('Error fetching movies:', error.message);
     return [];
   }
 };
 
 export const fetchMovieDetails = async (id) => {
-  try {
     const response = await axios.get(`${BASE_URL}&i=${id}`);
     return response.data;
-  } catch (error) {
-    alert('Error fetching movie details:', error);
-    return null;
-  }
+    // } catch (error) {
+  //   alert('Error fetching movie details:', error);
+  //   return null;
+  // }
 };

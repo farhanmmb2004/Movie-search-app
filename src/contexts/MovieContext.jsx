@@ -4,7 +4,7 @@ import { fetchMovies } from '../services/api';
 const MovieContext = createContext();
 
 const MovieContextProvider = ({ children }) => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState({});
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   const searchMovies = async (query) => {
