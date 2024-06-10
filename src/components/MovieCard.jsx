@@ -2,7 +2,8 @@ import React, { useContext,useState } from 'react';
 import { fetchMovieDetails } from '../services/api';
 import MovieDetail from './MovieDetail.jsx';
 import './MovieCard.css';
-const MovieCard = ({ movie }) => {
+import ReactCardFlip from 'react-card-flip';
+const MovieCard = ({movie}) => {
   const[click,setClick]= useState(false);
   let[details,setDetails]=useState({})
   const handleClick = async () => {
@@ -15,12 +16,16 @@ const MovieCard = ({ movie }) => {
   }
 
   return (
-    <div className="movie-card" onClick={handleClick} data-aos="fade-up" data-aos-offset="80">
+    <ReactCardFlip isFlipped={click} flipDirection="horizontal">
+    <div className="movie-card" onClick={handleClick} data-aos={!click&&"fade-up"} data-aos-offset="80">
      <h5>{movie.Title}</h5>
      <img src={movie.Poster}  />
      <p>{movie.Year}</p>
-     {click&&<MovieDetail details={details}></MovieDetail>}
     </div>
+    <div onClick={handleClick} className="back" >
+    {click&&<MovieDetail details={details}></MovieDetail>}
+    </div>
+    </ReactCardFlip>
   );
 };
 
