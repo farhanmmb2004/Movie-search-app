@@ -12,19 +12,19 @@ const SearchForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='inputBox' data-aos="slide-right">
+       <form onSubmit={handleSubmit}>
+      
+      <i class="fa-solid fa-magnifying-glass"></i>
       <input 
-      className='input'
+       className='input'
         type="text" 
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
         placeholder="Search for movies..."
-        data-aos="slide-right"
       />
-      <br />
-      <button type="submit"
-      data-aos="slide-left">Search</button>
     </form>
+    </div>
   );
 };
 

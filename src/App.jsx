@@ -6,10 +6,12 @@ import './App.css';
 function App() {
   return (
     <MovieContextProvider>
-      <div className="App">
+      <>
+      <div className='App'>
         <SearchForm />
-        <MovieList />
       </div>
+      <MovieList />
+      </>
     </MovieContextProvider>
   );
 }
