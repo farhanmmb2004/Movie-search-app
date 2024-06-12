@@ -27,10 +27,10 @@ const Footer = () => {
                                     <a className="" href="https://farhanmmb2004.github.io/Simon-s-game/">simons game</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/">weather App</a>
+                                    <a className="" href="https://main--weather-app1-mfkhan.netlify.app/">weather App</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/">Portfolio</a>
+                                    <a className="" href="https://farhanmmb2004.github.io/portfolio/">Portfolio</a>
                                 </li>
                             </ul>
                         </div>
