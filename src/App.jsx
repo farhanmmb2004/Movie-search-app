@@ -8,7 +8,9 @@ function App() {
     <MovieContextProvider>
       <>
       <div className='App'>
+        <div className="helper">
         <SearchForm />
+        </div>
       </div>
       <MovieList />
       </>
