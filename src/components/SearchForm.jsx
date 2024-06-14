@@ -3,6 +3,7 @@ import { MovieContext } from '../contexts/MovieContext.jsx';
 import OptionList from './OptionList.jsx';
 import BeatLoader from "react-spinners/BeatLoader";
 
+
 const SearchForm = () => {
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
@@ -45,7 +46,7 @@ const SearchForm = () => {
         aria-label="Loading Spinner"
         data-testid="loader"
       /></h3>}
-      <OptionList query={query} setQuery={setQuery} handleSubmit={handleSubmit} />
+      <OptionList handleSubmit={handleSubmit} />
     </>
   );
 };
