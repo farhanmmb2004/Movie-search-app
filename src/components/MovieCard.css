@@ -74,6 +74,9 @@
         border-radius: 25px;
         background-color: rgb(253, 253, 253);
     }
+    .helper ul li{
+        max-width:250px ;
+       }
     .inputBox input{
         width: 200px;
         border: none;
@@ -106,6 +109,9 @@
         border-radius: 25px;
         background-color: rgb(253, 253, 253);
     }
+    .helper ul li{
+        max-width:400px ;
+       }
     .inputBox input{
         width: 350px;
         border: none;
@@ -139,6 +145,9 @@
         border-radius: 25px;
         background-color: rgb(253, 253, 253);
     }
+    .helper ul li{
+        max-width:400px ;
+       }
     .inputBox input{
         width: 350px;
         border: none;
@@ -188,3 +197,4 @@
     align-items: center;
     justify-content: center;
   }
+  
