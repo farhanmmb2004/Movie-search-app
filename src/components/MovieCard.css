@@ -175,7 +175,7 @@
   .helper li{
     color: black;
     background-color:white;
-    height: 40px;
+    min-height: 40px;
     list-style: none;
     /* margin: 0px 0px 0px 0px; */
     margin-left: -32px;
