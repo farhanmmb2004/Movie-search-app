@@ -3,13 +3,19 @@ import { fetchMovieDetails } from '../services/api';
 import MovieDetail from './MovieDetail.jsx';
 import './MovieCard.css';
 import ReactCardFlip from 'react-card-flip';
+import FadeLoader from "react-spinners/FadeLoader";
 const MovieCard = ({movie}) => {
+  const [loading, setLoading] = useState(false);
   const[click,setClick]= useState(false);
-  let[details,setDetails]=useState({})
+  let[details,setDetails]=useState(null)
   const handleClick = async () => {
+    if(click==false){
+      setLoading(true);
+    }
     setClick(!click);
-    let detail = await fetchMovieDetails(movie.imdbID);
-    setDetails(detail);
+      let detail = await fetchMovieDetails(movie.imdbID);
+      setLoading(false);
+      setDetails(detail);
   };
   const back=()=>{
     setClick(!click)
@@ -23,7 +29,15 @@ const MovieCard = ({movie}) => {
      <p>{movie.Year}</p>
     </div>
     <div onClick={handleClick} className="back" >
-    {click&&<MovieDetail details={details}></MovieDetail>}
+    {loading&&<div className='loader'><p>Loading<FadeLoader
+
+        color="white"
+        loading={loading}
+        size={10}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      /></p></div>}
+    {(click&&!loading)&&<MovieDetail details={details}></MovieDetail>}
     </div>
     </ReactCardFlip>
   );
